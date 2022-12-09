@@ -44,7 +44,7 @@ function Users() {
   function Search(){
     var input = document.getElementById("search").value;
     const result = users.filter((user)=>{
-      if(user.name.includes(input)){
+      if(user.book.includes(input)){
         return user
       }
     })
@@ -64,7 +64,7 @@ function Users() {
       <nav class="navbar bg-light mb-3" style={{paddingLeft:"400px"}}>
         <div class="container-fluid">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" id='search' style={{width:"300px"}} onKeyUp={Search} type="search" placeholder="Search by name..." aria-label="Search"/>
+            <input class="form-control me-2" id='search' style={{width:"300px"}} onKeyUp={Search} type="search" placeholder="Search by book..." aria-label="Search"/>
           </form>
         </div>
       </nav>
